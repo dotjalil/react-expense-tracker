@@ -27,15 +27,11 @@ export default function App() {
   ]);
 
   const addExpense = (expense) => {
-    setExpenses((oldExpenses) => {
-      return [expense, ...expenses];
-    });
-    // console.log(data);
+    setExpenses([expense, ...expenses]);
   };
 
   return (
     <div>
-      <h1>Hello StackBlitz!</h1>
       <NewExpense onAddExpense={addExpense} />
       <Expenses expenses={expenses} />
     </div>
